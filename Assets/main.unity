@@ -226,7 +226,6 @@ GameObject:
   - component: {fileID: 1869894475}
   - component: {fileID: 1869894474}
   - component: {fileID: 1869894473}
-  - component: {fileID: 1869894476}
   m_Layer: 0
   m_Name: Dave  (1)_0
   m_TagString: Untagged
@@ -250,15 +249,19 @@ MonoBehaviour:
   movementX: 0
   movementY: 0
   myBody: {fileID: 0}
-  sr: {fileID: 0}
   anim: {fileID: 0}
-  renderer: {fileID: 0}
-  left: {fileID: 0}
-  right: {fileID: 0}
-  up: {fileID: 0}
-  down: {fileID: 0}
+  laserPrefabLeft: {fileID: 3593679447972646101, guid: 59b82d6515a14cf4db82fe418b89e0e7, type: 3}
+  laserPrefabRight: {fileID: 3593679447972646101, guid: 6682907b7f053fd448fddff0c19f516f, type: 3}
+  laserPrefabUp: {fileID: 3593679447972646101, guid: 648188272f63e4c458aed26ff4cd495e, type: 3}
+  laserPrefabDown: {fileID: 4019279371435913081, guid: 8ec9c6434e65d0e49b15b3ec74f35433, type: 3}
+  Daverenderer: {fileID: 1869894474}
+  left: {fileID: -1954452252, guid: 02c2fe743e8851b44ac6947f58923e35, type: 3}
+  right: {fileID: -1815967268, guid: 02c2fe743e8851b44ac6947f58923e35, type: 3}
+  up: {fileID: 759745872, guid: 02c2fe743e8851b44ac6947f58923e35, type: 3}
+  down: {fileID: -1278246572, guid: 02c2fe743e8851b44ac6947f58923e35, type: 3}
   numLasers: 3
   laserSpeed: 10
+  lastMovement: 0
 --- !u!212 &1869894474
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -321,26 +324,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1869894476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869894472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb0e21d367394d0438ae9adee54e9c44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 4019279371435913081, guid: 8ec9c6434e65d0e49b15b3ec74f35433, type: 3}
-  numLasers: 3
-  laserSpeed: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
