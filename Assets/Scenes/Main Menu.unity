@@ -267,6 +267,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 574876259357175604, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99755585
+      objectReference: {fileID: 0}
+    - target: {fileID: 574876259357175604, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 574876259357175604, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 574876259357175604, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.069873974
+      objectReference: {fileID: 0}
+    - target: {fileID: 574876259357175604, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 8.014
+      objectReference: {fileID: 0}
     - target: {fileID: 2017555441476187750, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
       propertyPath: m_Camera
       value: 
