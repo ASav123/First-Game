@@ -8,7 +8,6 @@ public class MainMenuController : MonoBehaviour
     //Runs when "play" button pressed
    public void PlayGame()
     {
-        Debug.Log("Button Pressed");
         SceneManager.LoadScene("Gameplay");
     }
 
@@ -16,8 +15,17 @@ public class MainMenuController : MonoBehaviour
     public void EnterMenu()
     {
         SceneManager.LoadScene("Main Menu");
-
     }
 
+    //Runs when player health reaches zero
+    public void PlayerDeath()
+    {
+        SceneManager.LoadScene("Death Screen");
+    }
 
+    //Runs when player beats all three waves
+    public void PayerWin()
+    {
+        SceneManager.LoadScene("Win Screen");
+    }
 }
