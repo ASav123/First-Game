@@ -207,6 +207,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1843353105}
   m_LocalEulerAnglesHint: {x: 7.961, y: 2.22, z: 15.639}
+--- !u!1 &256881200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256881202}
+  - component: {fileID: 256881201}
+  m_Layer: 0
+  m_Name: Game Restarter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &256881201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256881200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ad3d555dc197742a91340b18125323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &256881202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256881200}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5457065, y: 1.2578433, z: 0.01082271}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &584574967
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +690,14 @@ PrefabInstance:
     - target: {fileID: 5969662792683150199, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 256881201}
+    - target: {fileID: 5969662792683150199, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969662792683150199, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7173758478645548506, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
       propertyPath: m_Name
@@ -788,3 +840,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 702272899}
   - {fileID: 1843353104}
+  - {fileID: 256881202}

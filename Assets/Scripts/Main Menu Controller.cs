@@ -1,12 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Menu : MonoBehaviour
+public class MainMenuController : MonoBehaviour
 {
-    public void PlayGame()
+    //Runs when "play" button pressed
+   public void PlayGame()
     {
+        Debug.Log("Button Pressed");
+        SceneManager.LoadScene("Gameplay");
+    }
 
+    //Runs when "try again" or "play again" buttons prssed
+    public void EnterMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
 
     }
+
+
 }
