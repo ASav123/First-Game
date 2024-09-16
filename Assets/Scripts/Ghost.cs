@@ -14,7 +14,6 @@ public class Ghost : MonoBehaviour
     void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
-
     }   
 
 
@@ -22,5 +21,13 @@ public class Ghost : MonoBehaviour
     void FixedUpdate()
     {
         myBody.velocity = new Vector2(speedX, speedY);
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
