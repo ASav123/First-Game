@@ -796,6 +796,8 @@ MonoBehaviour:
   life1: {fileID: 1913602815}
   life2: {fileID: 399717686}
   life3: {fileID: 10425617}
+  lives: 0
+  scenesScript: {fileID: 218794914}
 --- !u!1 &1144610262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,6 +1107,7 @@ MonoBehaviour:
   rightPos: {fileID: 1768027932}
   upPos: {fileID: 782272845}
   downPos: {fileID: 1626299384}
+  livesScript: {fileID: 1013632573}
 --- !u!4 &1611322715
 Transform:
   m_ObjectHideFlags: 0
@@ -1119,8 +1122,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 782272845}
-  - {fileID: 1626299384}
   - {fileID: 1610045300}
+  - {fileID: 1626299384}
   - {fileID: 1768027932}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

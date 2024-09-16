@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GhostSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     //Ghost prefab
     [SerializeField]
@@ -22,6 +22,7 @@ public class GhostSpawner : MonoBehaviour
     private int repeat;
     private float delay;
 
+    public Lives livesScript;
 
 
     // Start is called before the first frame update

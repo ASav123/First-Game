@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuController : MonoBehaviour
+public class Scenes : MonoBehaviour
 {
     //Runs when "play" button pressed
    public void PlayGame()
