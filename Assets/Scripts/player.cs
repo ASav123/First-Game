@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    public float moveForce = 10f;
+    public float moveForce = 5f;
     public float movementX;
     public float movementY;
     public Rigidbody2D myBody;
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public Sprite down;
     [SerializeField]
     public int numLasers = 3;
-    public float laserSpeed = 10f;
+    public float laserSpeed = 20f;
     public int lastMovement = 0;
 
 
@@ -40,8 +40,8 @@ public class Player : MonoBehaviour
     {
         movementX = Input.GetAxisRaw("Horizontal");
         movementY = Input.GetAxisRaw("Vertical");
-        transform.position += new Vector3(movementX, 0f, 0f) * Time.deltaTime * moveForce;
-        transform.position += new Vector3(0f, movementY, 0f) * Time.deltaTime * moveForce;
+        transform.position += new Vector3(movementX/2, 0f, 0f) * Time.deltaTime * moveForce;
+        transform.position += new Vector3(0f, movementY/2, 0f) * Time.deltaTime * moveForce;
         if (movementX > 0)
         {
             lastMovement = 1;
@@ -66,9 +66,8 @@ public class Player : MonoBehaviour
         {
             if (lastMovement == -1)
             {
-
-                GameObject laser = Instantiate(laserPrefabRight,
-                                               transform.position,
+                GameObject laser = Instantiate(laserPrefabLeft,
+                                               transform.position + new Vector3((float)-0.742, (float)0.275),
                                                Quaternion.identity);
                 SpriteRenderer renderer = laser.GetComponent<SpriteRenderer>();
                 renderer.sortingOrder = 1;
@@ -77,9 +76,9 @@ public class Player : MonoBehaviour
             }
             else if (lastMovement == 1)
             {
-                GameObject laser = Instantiate(laserPrefabLeft,
-                                                           transform.position,
-                                                           Quaternion.identity);
+                GameObject laser = Instantiate(laserPrefabRight,
+                                                transform.position + new Vector3((float)0.742, (float)0.275),
+                                                Quaternion.identity);
                 SpriteRenderer renderer = laser.GetComponent<SpriteRenderer>();
                 renderer.sortingOrder = 1;
                 Rigidbody2D rb = laser.GetComponent<Rigidbody2D>();
@@ -88,7 +87,7 @@ public class Player : MonoBehaviour
             else if (lastMovement == 2)
             {
                 GameObject laser = Instantiate(laserPrefabUp,
-                                              transform.position,
+                                              transform.position + new Vector3((float)0.026, (float)0.866),
                                               Quaternion.identity);
                 SpriteRenderer renderer = laser.GetComponent<SpriteRenderer>();
                 renderer.sortingOrder = 1;
@@ -98,7 +97,7 @@ public class Player : MonoBehaviour
             else if (lastMovement == -2)
             {
                 GameObject laser = Instantiate(laserPrefabDown,
-                                              transform.position,
+                                              transform.position + new Vector3((float)0.026, (float)-0.019),
                                               Quaternion.identity);
                 SpriteRenderer renderer = laser.GetComponent<SpriteRenderer>();
                 renderer.sortingOrder = 1;
@@ -119,7 +118,7 @@ public class Player : MonoBehaviour
             Daverenderer.sprite = left ;
 
         }
-        if (movementY > 0f)
+        else if (movementY > 0f)
         {
             Daverenderer.sprite = up;
         }
