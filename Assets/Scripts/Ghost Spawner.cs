@@ -56,11 +56,11 @@ public class GhostSpawner : MonoBehaviour
             }
             else
             {
-                Debug.Log("The game is over!");
+                // Debug.Log("The game is over!");
                 break;
             }
 
-            Debug.Log("You are on wave" + wave);
+            // Debug.Log("You are on wave" + wave);
 
 
             //Spawns ghosts for each wave
