@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class bullets : MonoBehaviour
 {
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
 
     }
 
@@ -17,12 +19,18 @@ public class bullets : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Bullet collided with: " + collision.gameObject.name);
-
+        Debug.Log(collision);
+        //if (collision.CompareTag("ghost"))
+        //{
+        //    audio.Play();
+        //}
         if (collision.CompareTag("boundary") || collision.CompareTag("ghost"))
         {
-            Destroy(gameObject); 
+                
+            Destroy(gameObject);
+            
         }
+       
     }
 
 }

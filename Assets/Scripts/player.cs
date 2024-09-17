@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
     public int numLasers = 3;
     public float laserSpeed = 20f;
     public int lastMovement = 0;
+    public AudioSource audio;
+    
+
 
 
     // Start is called before the first frame update
@@ -35,6 +38,7 @@ public class Player : MonoBehaviour
     {
         pressKey();
         lasers();
+        audio = GetComponent<AudioSource>();
     }
     void pressKey()
     {
@@ -64,6 +68,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            audio.Play();
             if (lastMovement == -1)
             {
                 GameObject laser = Instantiate(laserPrefabLeft,
