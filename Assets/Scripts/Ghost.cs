@@ -25,7 +25,7 @@ public class Ghost : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.CompareTag("Bullet"))
+        if (collision.CompareTag("boundary") || collision.CompareTag("Bullet")) 
         {
             Destroy(gameObject);
         }
