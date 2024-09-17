@@ -24,7 +24,7 @@ public class Scenes : MonoBehaviour
     }
 
     //Runs when player beats all three waves
-    public void PayerWin()
+    public void PlayerWin()
     {
         SceneManager.LoadScene("Win Screen");
     }

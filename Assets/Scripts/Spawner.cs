@@ -22,7 +22,9 @@ public class Spawner : MonoBehaviour
     private int repeat;
     private float delay;
 
+    //Scripts
     public Lives livesScript;
+    public Scenes scenesScript;
 
 
     // Start is called before the first frame update
@@ -57,12 +59,8 @@ public class Spawner : MonoBehaviour
             }
             else
             {
-                // Debug.Log("The game is over!");
                 break;
             }
-
-            // Debug.Log("You are on wave" + wave);
-
 
             //Spawns ghosts for each wave
             for( int i = repeat; i > 0; i--)
@@ -100,6 +98,14 @@ public class Spawner : MonoBehaviour
                     spawnedMonster.GetComponent<Ghost>().speedX = 0;
                     spawnedMonster.GetComponent<Ghost>().speedY = Random.Range(1, 2);
                 }
+            }
+            
+            // Game wins if player survives all waves
+            if (wave == 3)
+            {
+                yield return new WaitForSeconds(7);
+                scenesScript.PlayerWin();
+                break;
             }
 
             wave++;
