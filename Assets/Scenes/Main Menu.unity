@@ -388,6 +388,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu Holder
       objectReference: {fileID: 0}
+    - target: {fileID: 8857930851721691492, guid: 51384ef00bffbdc4590bd46759a68b36, type: 3}
+      propertyPath: m_text
+      value: 'Ghost Blasters!
+
+
+        Press Play To Begin'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
