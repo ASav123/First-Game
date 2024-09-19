@@ -147,8 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedX: 0
   speedY: 0
-  death: {fileID: 5118153292237600073}
-  deletable: 0
+  speed: 2
 --- !u!50 &5525782744875722445
 Rigidbody2D:
   serializedVersion: 4
