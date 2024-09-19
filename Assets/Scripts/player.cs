@@ -23,8 +23,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     public int numLasers = 3;
     public float laserSpeed = 20f;
+    public AudioSource bullet;
     public int lastMovement = 0;
-    public AudioSource audio;
     
 
 
@@ -38,7 +38,6 @@ public class Player : MonoBehaviour
     {
         pressKey();
         lasers();
-        audio = GetComponent<AudioSource>();
     }
     void pressKey()
     {
@@ -68,7 +67,9 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            audio.Play();
+            bullet = GetComponent<AudioSource>();
+            bullet.Play();
+
             if (lastMovement == -1)
             {
                 GameObject laser = Instantiate(laserPrefabLeft,

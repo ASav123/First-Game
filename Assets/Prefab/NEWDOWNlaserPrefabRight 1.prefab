@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9096375049075881586}
   - component: {fileID: 1514131901167646403}
   - component: {fileID: 4581825875153171451}
-  - component: {fileID: -2675786840451367960}
+  - component: {fileID: 9070299542996906038}
   m_Layer: 0
   m_Name: NEWDOWNlaserPrefabRight 1
   m_TagString: Bullet
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1427869a651154b44b55bd589f90839e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: -2675786840451367960}
---- !u!82 &-2675786840451367960
+  bullet: {fileID: 9070299542996906038}
+--- !u!82 &9070299542996906038
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,7 +183,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: df12eb8e40c2401469865cf578cdeb3a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 15aad2370ee3331499dceca59382cf21, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

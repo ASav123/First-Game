@@ -9,14 +9,14 @@ public class Ghost : MonoBehaviour
     public float speedX;
     public float speedY;
     private Rigidbody2D myBody;
-    public AudioSource audio;
-
+    public bool deletable = false;
     void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
-        audio = GetComponent<AudioSource>();
     }
-
+    void Update()
+    {
+    }
 
     //Ghost movement
     void FixedUpdate()
@@ -25,18 +25,11 @@ public class Ghost : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision);
-        if (collision.CompareTag("Bullet"))
-        {
-            audio.Play();
-            Debug.Log("audio played");
-
-            Destroy(gameObject);
-        }
-        if (collision.CompareTag("boundary")) 
+        if (collision.CompareTag("Bullet") || collision.CompareTag("boundary"))
         {
             Destroy(gameObject);
         }
-       
     }
+
+
 }
