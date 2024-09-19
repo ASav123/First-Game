@@ -26,6 +26,8 @@ public class Spawner : MonoBehaviour
     public Lives livesScript;
     public Scenes scenesScript;
 
+    public Transform player;
+
 
     // Start is called before the first frame update
     void Start()

@@ -239,6 +239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dave  (1)_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7597053530769148167, guid: d4f406ae841fdc74681cebd6a68e87d3, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7739907452031043530, guid: d4f406ae841fdc74681cebd6a68e87d3, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -1684,6 +1688,7 @@ MonoBehaviour:
   downPos: {fileID: 1626299384}
   livesScript: {fileID: 1013632573}
   scenesScript: {fileID: 218794914}
+  player: {fileID: 0}
 --- !u!4 &1611322715
 Transform:
   m_ObjectHideFlags: 0

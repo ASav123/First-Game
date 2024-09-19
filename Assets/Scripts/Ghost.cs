@@ -9,10 +9,13 @@ public class Ghost : MonoBehaviour
     public float speedX;
     public float speedY;
     private Rigidbody2D myBody;
-    public bool deletable = false;
+    private Transform player;
+    public float speed = 2f;
+
     void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     void Update()
     {
@@ -21,7 +24,16 @@ public class Ghost : MonoBehaviour
     //Ghost movement
     void FixedUpdate()
     {
-        myBody.velocity = new Vector2(speedX, speedY);
+        if (player != null)
+        {
+            Vector2 direction = (player.position - transform.position).normalized;
+
+            myBody.velocity = direction * speed;
+        }
+        else
+        {
+            myBody.velocity = Vector2.zero;
+        }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
