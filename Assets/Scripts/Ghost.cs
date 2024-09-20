@@ -17,12 +17,9 @@ public class Ghost : MonoBehaviour
         myBody = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-    void Update()
-    {
-    }
-
+    
     //Ghost movement
-    void FixedUpdate()
+    void Update()
     {
         if (player != null)
         {
@@ -35,12 +32,18 @@ public class Ghost : MonoBehaviour
             myBody.velocity = Vector2.zero;
         }
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet") || collision.CompareTag("boundary"))
         {
             Destroy(gameObject);
+        }if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<Player>().lives.lives--;
+            Destroy(gameObject);
         }
+       
     }
 
 

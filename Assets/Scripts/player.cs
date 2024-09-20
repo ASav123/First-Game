@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     public float laserSpeed = 20f;
     public AudioSource bullet;
     public int lastMovement = 0;
+    public AudioSource audio;
+
+    public Lives lives;
     
 
 

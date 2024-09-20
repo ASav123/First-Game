@@ -59,6 +59,22 @@ public class Spawner : MonoBehaviour
                 repeat = 12;
                 delay = 0.5f;
             }
+            else if (wave == 4)
+            {
+                repeat = 14;
+                delay = 0.4f;
+            }
+            else if (wave == 5)
+            {
+                repeat = 16;
+                delay = 0.3f;
+            }
+            else if (wave == 6)
+            {
+                yield return new WaitForSeconds(3);
+                repeat = 10;
+                delay = 0.2f;
+            }
             else
             {
                 break;
@@ -79,6 +95,7 @@ public class Spawner : MonoBehaviour
                 {
                     spawnedMonster.transform.position = leftPos.position;
                     spawnedMonster.GetComponent<Ghost>().speedX = Random.Range(1, 2);
+                    float speedY = Random.Range(-1, 1);
                     spawnedMonster.GetComponent<Ghost>().speedY = 0;
                 }
 
@@ -86,26 +103,29 @@ public class Spawner : MonoBehaviour
                 {
                     spawnedMonster.transform.position = rightPos.position;
                     spawnedMonster.GetComponent<Ghost>().speedX = -Random.Range(1, 2);
+                    float speedX = Random.Range(-1, 1);
                     spawnedMonster.GetComponent<Ghost>().speedY = 0;
                 }
                 else if (randomSide == 2)
                 {
                     spawnedMonster.transform.position = upPos.position;
                     spawnedMonster.GetComponent<Ghost>().speedX = 0;
+                    float speedY = Random.Range(-1, 1);
                     spawnedMonster.GetComponent<Ghost>().speedY = -Random.Range(1, 2);
                 }
                 else
                 {
                     spawnedMonster.transform.position = downPos.position;
                     spawnedMonster.GetComponent<Ghost>().speedX = 0;
+                    float speedY = Random.Range(-1, 1);
                     spawnedMonster.GetComponent<Ghost>().speedY = Random.Range(1, 2);
                 }
             }
             
             // Game wins if player survives all waves
-            if (wave == 3)
+            if (wave == 6)
             {
-                yield return new WaitForSeconds(7);
+                yield return new WaitForSeconds(4);
                 scenesScript.PlayerWin();
                 break;
             }

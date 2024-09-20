@@ -19,7 +19,7 @@ public class Lives : MonoBehaviour
     void Start()
     {
         lives = 3;
-        StartCoroutine(UpdateLives());
+        // StartCoroutine(UpdateLives());
     }
 
 
@@ -51,6 +51,18 @@ public class Lives : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (lives <= 2)
+        {
+            Destroy(life3);
+        }
+        if (lives <= 1)
+        {
+            Destroy(life2);
+        }
+        if (lives <= 0)
+        {
+            Destroy(life1);
+            scenesScript.PlayerDeath();
+        }
     }
 }

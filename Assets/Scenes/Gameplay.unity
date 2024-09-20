@@ -224,6 +224,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 291781122}
     - target: {fileID: 4209726054175973574, guid: d4f406ae841fdc74681cebd6a68e87d3, type: 3}
+      propertyPath: lives
+      value: 
+      objectReference: {fileID: 1013632573}
+    - target: {fileID: 4209726054175973574, guid: d4f406ae841fdc74681cebd6a68e87d3, type: 3}
       propertyPath: myBody
       value: 
       objectReference: {fileID: 291781105}
